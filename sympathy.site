@@ -1,0 +1,35 @@
+
+/*
+ * sympathy.site
+ * A template for a common Sympathy website
+ */
+
+{
+	"settings" : {
+	},
+
+	"handlers" : [
+		{
+			"path" : "/template",
+			"handler" : "com.eqela.sympathy.libcommonhandler.DirectoryHandler",
+			"settings" : {
+				"content_dir" : "template/default",
+				"allow_download_t_files" : "false",
+				"list_directories" : "false"
+			}
+		},
+		{
+			"path" : "",
+			"handler" : "com.eqela.sympathy.libcommonhandler.DirectoryHandler",
+			"settings" : {
+				"template_dir" : "template/default",
+				"content_dir" : "content",
+				"list_directories" : "false"
+			}
+		},
+		{
+			"path" : "/hand",
+			"handler" : "sympathy.libcustom.MyHandler"
+		}
+	]
+}
